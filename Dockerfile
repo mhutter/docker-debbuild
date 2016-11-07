@@ -11,5 +11,5 @@ CMD ["/bin/bash"]
 RUN chmod +x /entrypoint.sh && \
     echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/debbuild && \
     apt-get update && \
-    apt-get install -y git git-buildpackage devscripts debhelper && \
+    apt-get install -y git vim git-buildpackage devscripts debhelper && \
     rm -rf /var/lib/apt/lists/*
