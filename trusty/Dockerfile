@@ -4,11 +4,11 @@ MAINTAINER Manuel Hutter <manuel@hutter.io>
 VOLUME /work
 WORKDIR /work
 
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["/bin/bash"]
 
-RUN chmod +x /entrypoint.sh && \
+RUN chmod +x /docker-entrypoint.sh && \
     echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/debbuild && \
     apt-get update && \
     apt-get install -y apt-file build-essential curl debhelper devscripts dput \

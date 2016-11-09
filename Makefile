@@ -1,5 +1,8 @@
-build:
-	docker build -t $(USER)/debbuild .
+build: trusty xenial
+
+%: %/Dockerfile
+	cp docker-entrypoint.sh $@/
+	docker build -t $(USER)/debbuild:$@ $@/.
 
 run:
 	docker run -it --rm \
