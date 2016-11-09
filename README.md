@@ -8,6 +8,6 @@ When used as documented below, `$DEBEMAIL` and `$DEBFULLNAME` will be set automa
 
     docker run -it --rm \
       -v "${PWD}/..":/work \
-      -v "${HOME}/.gitconfig":/root/.gitconfig \
-      -v "${HOME}/.gnupg":/root/.gnupg \
+      -v "${HOME}/.gitconfig":/home/builder/.gitconfig \
+      -v "${HOME}/.gnupg":/home/builder/.gnupg \
       mhutter/debbuild
