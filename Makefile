@@ -1,4 +1,4 @@
-build: trusty xenial
+build: trusty xenial precise
 
 %: %/Dockerfile
 	cp docker-entrypoint.sh $@/
