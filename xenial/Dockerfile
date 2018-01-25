@@ -13,7 +13,8 @@ RUN chmod +x /docker-entrypoint.sh && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
         apt-file build-essential curl debhelper devscripts dput \
-        fakeroot gcc gem2deb git git-buildpackage libdistro-info-perl vim && \
+        fakeroot gcc gem2deb git git-buildpackage libdistro-info-perl vim \
+        python3-setuptools && \
     rm -rf /var/lib/apt/lists/* && \
     useradd -c Builder -m -U builder
 

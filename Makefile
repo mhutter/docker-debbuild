@@ -10,3 +10,5 @@ run:
 		-v "${HOME}/.gitconfig":/root/.gitconfig \
 		-v "${HOME}/.gnupg":/root/.gnupg \
 		$(USER)/debbuild
+
+.PHONY: trusty xenial precise run build
