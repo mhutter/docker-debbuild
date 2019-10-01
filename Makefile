@@ -1,4 +1,4 @@
-build: trusty xenial precise
+build: trusty xenial bionic
 
 %: %/Dockerfile
 	cp docker-entrypoint.sh $@/
@@ -11,4 +11,4 @@ run:
 		-v "${HOME}/.gnupg":/root/.gnupg \
 		$(USER)/debbuild
 
-.PHONY: trusty xenial precise run build
+.PHONY: trusty xenial bionic run build
