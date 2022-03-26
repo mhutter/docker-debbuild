@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 MAINTAINER Manuel Hutter <manuel@hutter.io>
 
 VOLUME /work
