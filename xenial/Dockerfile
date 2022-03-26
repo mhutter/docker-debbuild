@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:focal
 MAINTAINER Manuel Hutter <manuel@hutter.io>
 
 VOLUME /work
